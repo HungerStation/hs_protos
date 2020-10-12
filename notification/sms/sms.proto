@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
 
-package notification.sms;
+package protos.notification.sms;
 
 message Request {
    string guid = 1;

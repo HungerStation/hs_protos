@@ -6,7 +6,7 @@ require 'google/protobuf'
 require 'google/protobuf/timestamp_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("notification/push/push.proto", :syntax => :proto3) do
-    add_message "notification.push.Request" do
+    add_message "protos.notification.push.Request" do
       optional :guid, :string, 1
       optional :title, :string, 2
       optional :source, :string, 3
@@ -14,15 +14,17 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       map :payload, :string, :string, 5
       optional :event_timestamp, :message, 6, "google.protobuf.Timestamp"
     end
-    add_message "notification.push.Response" do
+    add_message "protos.notification.push.Response" do
       optional :error, :string, 1
     end
   end
 end
 
-module Notification
-  module Push
-    Request = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("notification.push.Request").msgclass
-    Response = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("notification.push.Response").msgclass
+module Protos
+  module Notification
+    module Push
+      Request = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("protos.notification.push.Request").msgclass
+      Response = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("protos.notification.push.Response").msgclass
+    end
   end
 end
