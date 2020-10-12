@@ -2,8 +2,6 @@ syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
 
-import "google/api/annotations.proto";
-
 package notification.slack;
 
 message Request {
@@ -23,13 +21,4 @@ message Request {
 
 message Response {
   string error = 1;
-}
-
-service SlackService {
-  rpc Send(Request) returns (Response) {
-    option (google.api.http) = {
-      post: "/notifications/slack"
-      body: "*"
-    };
-  }
 }
