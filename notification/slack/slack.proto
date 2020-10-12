@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+import "google/api/annotations.proto";
+
+package notification.slack;
+
+message Request {
+  string guid = 1;
+  string title = 2;
+  string source = 3;
+  string webhook = 4;
+  enum SeverityLevel {
+    INFO = 0;
+    WARN = 1;
+    ERROR = 2;
+  }
+  SeverityLevel level = 5;
+  map<string, string> payload = 6;
+  google.protobuf.Timestamp event_timestamp = 7;
+}
+
+message Response {
+  string error = 1;
+}
+
+service SlackService {
+  rpc Send(Request) returns (Response) {
+    option (google.api.http) = {
+      post: "/notifications/slack"
+      body: "*"
+    };
+  }
+}
