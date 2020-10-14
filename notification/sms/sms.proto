@@ -4,6 +4,8 @@ import "google/protobuf/timestamp.proto";
 
 package protos.notification.sms;
 
+option go_package = "notification/sms";
+
 message Request {
    string guid = 1;
    string title = 2;

@@ -4,6 +4,8 @@ import "google/protobuf/timestamp.proto";
 
 package protos.notification.slack;
 
+option go_package = "notification/slack";
+
 message Request {
   string guid = 1;
   string title = 2;
