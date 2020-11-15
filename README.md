@@ -27,7 +27,7 @@ $ protoc path/to/file.proto --go_out=. --ruby_out=.
 Include this repository as a git-submodule. From your project's root directory run following commands:
 
 ```
-$ git submodule add git@github.com:HungerStation/hs_protos.git lib/notification
+$ git submodule add git@github.com:HungerStation/hs_protos.git lib/protos
 $ git submodule init
 $ git submodule update
 ```
