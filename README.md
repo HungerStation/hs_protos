@@ -36,7 +36,7 @@ $ git submodule update
 
 When this repository is updated, you need to pull the updates manually:
 
-- Change directory: `$ cd lib/notification`
+- Change directory: `$ cd lib/protos`
 - Pull the latest proto files: `$ git checkout master && git pull`
 - Back to project's root directory: `$ cd -`
-- Commit changes: `$ git add lib/notification && git commit`
+- Commit changes: `$ git add lib/protos && git commit`
