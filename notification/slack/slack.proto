@@ -7,6 +7,27 @@ package protos.notification.slack;
 option go_package = "notification/slack";
 
 message Request {
+  message Field {
+    string title = 1;
+    string value = 2;
+    bool short = 3;
+  }
+
+  message Attachment {
+    string color = 1;
+    string fallback = 2;
+    string title = 3;
+    string title_link = 4;
+    string pretext = 5;
+    string text = 6;
+    repeated Field fields = 7;
+  }
+
+  message Message {
+    string text = 1;
+    repeated Attachment attachments = 2;
+  }
+
   string guid = 1;
   string title = 2;
   string source = 3;
@@ -17,7 +38,7 @@ message Request {
     ERROR = 2;
   }
   SeverityLevel level = 5;
-  map<string, string> payload = 6;
+  Message payload = 6;
   google.protobuf.Timestamp event_timestamp = 7;
 }
 
