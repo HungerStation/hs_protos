@@ -32,6 +32,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "protos.notification.slack.Request.Message" do
       optional :text, :string, 1
       repeated :attachments, :message, 2, "protos.notification.slack.Request.Attachment"
+      optional :channel, :string, 3
+      optional :username, :string, 4
+      optional :icon_emoji, :string, 5
+      optional :icon_url, :string, 6
     end
     add_enum "protos.notification.slack.Request.SeverityLevel" do
       value :INFO, 0

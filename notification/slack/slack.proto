@@ -26,6 +26,10 @@ message Request {
   message Message {
     string text = 1;
     repeated Attachment attachments = 2;
+    string channel = 3;
+    string username = 4;
+    string icon_emoji = 5;
+    string icon_url = 6;
   }
 
   string guid = 1;
