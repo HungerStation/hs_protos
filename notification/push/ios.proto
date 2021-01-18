@@ -7,11 +7,6 @@ package protos.notification.push.ios;
 option go_package = "notification/push/ios";
 
 message Request {
-  message Payload {
-    string alert = 1;
-    string sound = 2;
-    map<string, string> custom = 3;
-  }
 
   enum Priority {
     LOW = 0;
@@ -21,8 +16,10 @@ message Request {
   message Message {
     string topic = 1;
     string collapse_id = 2;
-    Payload payload = 3;
+    map<string, string> custom = 3;
     Priority priority = 4;
+    string alert = 5;
+    string sound = 6;
   }
 
   string guid = 1;
