@@ -13,10 +13,16 @@ message Request {
     map<string, string> custom = 3;
   }
 
+  enum Priority {
+    LOW = 0;
+    HIGH = 1;
+  }
+
   message Message {
     string topic = 1;
     string collapse_id = 2;
     Payload payload = 3;
+    Priority priority = 4;
   }
 
   string guid = 1;

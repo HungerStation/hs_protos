@@ -23,6 +23,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :topic, :string, 1
       optional :collapse_id, :string, 2
       optional :payload, :message, 3, "protos.notification.push.ios.Request.Payload"
+      optional :priority, :enum, 4, "protos.notification.push.ios.Request.Priority"
+    end
+    add_enum "protos.notification.push.ios.Request.Priority" do
+      value :LOW, 0
+      value :HIGH, 1
     end
     add_message "protos.notification.push.ios.Response" do
       optional :error, :string, 1
@@ -37,6 +42,7 @@ module Protos
         Request = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("protos.notification.push.ios.Request").msgclass
         Request::Payload = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("protos.notification.push.ios.Request.Payload").msgclass
         Request::Message = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("protos.notification.push.ios.Request.Message").msgclass
+        Request::Priority = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("protos.notification.push.ios.Request.Priority").enummodule
         Response = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("protos.notification.push.ios.Response").msgclass
       end
     end
