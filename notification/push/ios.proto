@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package protos.notification.push.ios;
+
+option go_package = "notification/push/ios";
+
+message Request {
+  message Payload {
+    string alert = 1;
+    string sound = 2;
+    map<string, string> custom = 3;
+  }
+
+  message Message {
+    string topic = 1;
+    string collapse_id = 2;
+    Payload payload = 3;
+  }
+
+  string guid = 1;
+  string title = 2;
+  string source = 3;
+  // device tokens/recipient
+  repeated string tokens = 4;
+  Message payload = 5;
+  google.protobuf.Timestamp event_timestamp = 6;
+}
+
+message Response {
+  string error = 1;
+}
