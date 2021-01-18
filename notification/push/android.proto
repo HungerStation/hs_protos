@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package protos.notification.push.android;
+
+option go_package = "notification/push/android";
+
+message Request {
+  enum Priority {
+    NORMAL = 0;
+    HIGH = 1;
+  }
+
+  message Message {
+    string topic = 1;
+    string collapse_key = 2;
+    Priority priority = 3;
+    map<string, string> data = 4;
+  }
+
+  string guid = 1;
+  string title = 2;
+  string source = 3;
+  // device tokens/recipient
+  repeated string tokens = 4;
+  Message payload = 5;
+  google.protobuf.Timestamp event_timestamp = 6;
+}
+
+message Response {
+  string error = 1;
+}
