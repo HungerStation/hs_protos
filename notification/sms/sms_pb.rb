@@ -14,6 +14,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :sms_type, :enum, 5, "protos.notification.sms.Request.SmsType"
       map :payload, :string, :string, 6
       optional :event_timestamp, :message, 7, "google.protobuf.Timestamp"
+      optional :service_token, :string, 8
     end
     add_enum "protos.notification.sms.Request.SmsType" do
       value :DEFAULT, 0

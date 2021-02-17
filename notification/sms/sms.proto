@@ -19,6 +19,7 @@ message Request {
    SmsType sms_type = 5;
    map<string, string> payload = 6;
    google.protobuf.Timestamp event_timestamp = 7;
+   string service_token = 8;
 }
 
 message Response {

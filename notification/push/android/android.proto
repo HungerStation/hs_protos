@@ -26,6 +26,7 @@ message Request {
   repeated string tokens = 4;
   Message payload = 5;
   google.protobuf.Timestamp event_timestamp = 6;
+  string service_token = 7;
 }
 
 message Response {
