@@ -19,13 +19,13 @@ message Request {
 
   string guid = 1;
   string subject = 2;
-  string source = 4;
-  Content content = 5;
-  Address from = 6;
-  Address replyTo = 7;
-  repeated Address to = 8;
-  google.protobuf.Timestamp event_timestamp = 9;
-  string service_token = 10;
+  Content content = 3;
+  Address from = 4;
+  Address replyTo = 5;
+  repeated Address to = 6;
+  google.protobuf.Timestamp event_timestamp = 7;
+  string service_token = 8;
+  string source = 9;
 }
 
 message Response {
