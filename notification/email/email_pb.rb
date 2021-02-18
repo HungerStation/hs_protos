@@ -9,12 +9,13 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "protos.notification.email.Request" do
       optional :guid, :string, 1
       optional :subject, :string, 2
-      optional :content, :message, 3, "protos.notification.email.Request.Content"
-      optional :from, :message, 4, "protos.notification.email.Request.Address"
-      optional :replyTo, :message, 5, "protos.notification.email.Request.Address"
-      repeated :to, :message, 6, "protos.notification.email.Request.Address"
-      optional :event_timestamp, :message, 7, "google.protobuf.Timestamp"
-      optional :service_token, :string, 8
+      optional :source, :string, 4
+      optional :content, :message, 5, "protos.notification.email.Request.Content"
+      optional :from, :message, 6, "protos.notification.email.Request.Address"
+      optional :replyTo, :message, 7, "protos.notification.email.Request.Address"
+      repeated :to, :message, 8, "protos.notification.email.Request.Address"
+      optional :event_timestamp, :message, 9, "google.protobuf.Timestamp"
+      optional :service_token, :string, 10
     end
     add_message "protos.notification.email.Request.Address" do
       optional :name, :string, 1
