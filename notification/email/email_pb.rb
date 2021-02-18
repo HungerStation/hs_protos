@@ -15,6 +15,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :to, :message, 6, "protos.notification.email.Request.Address"
       optional :event_timestamp, :message, 7, "google.protobuf.Timestamp"
       optional :service_token, :string, 8
+      optional :source, :string, 9
     end
     add_message "protos.notification.email.Request.Address" do
       optional :name, :string, 1
