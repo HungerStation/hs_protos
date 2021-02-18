@@ -44,6 +44,7 @@ message Request {
   SeverityLevel level = 5;
   Message payload = 6;
   google.protobuf.Timestamp event_timestamp = 7;
+  string service_token = 8;
 }
 
 message Response {

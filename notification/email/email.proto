@@ -24,6 +24,7 @@ message Request {
   Address replyTo = 5;
   repeated Address to = 6;
   google.protobuf.Timestamp event_timestamp = 7;
+  string service_token = 8;
 }
 
 message Response {
