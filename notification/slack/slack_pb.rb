@@ -14,6 +14,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :level, :enum, 5, "protos.notification.slack.Request.SeverityLevel"
       optional :payload, :message, 6, "protos.notification.slack.Request.Message"
       optional :event_timestamp, :message, 7, "google.protobuf.Timestamp"
+      optional :service_token, :string, 8
     end
     add_message "protos.notification.slack.Request.Field" do
       optional :title, :string, 1
