@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package protos.vendorsearch.storetype;
+
+option go_package = "vendor-search/store-type;store_type";
+
+message StoreType {
+  message Metadata {
+    enum ActionType {
+      CREATE = 0;
+      UPDATE = 1;
+      DELETE = 2;
+    }
+
+    string guid = 1;
+    string source = 2;
+    ActionType action = 3;
+    google.protobuf.Timestamp event_timestamp = 4;
+  }
+
+  Metadata metadata = 1;
+  uint32 id = 2;
+  uint32 store_type = 3;
+  string name = 4;
+  string name_ar = 5;
+  bool enabled = 6;
+  uint32 weight = 7;
+  uint32 view_style = 8;
+  string description = 9;
+  string description_ar = 10;
+  google.protobuf.Timestamp created_at = 11;
+  google.protobuf.Timestamp updated_at = 12;
+  string background_image_url = 13;
+  string unavailable_description = 14;
+  string unavailable_description_ar = 15;
+  string coming_soon_description = 16;
+  string coming_soon_description_ar = 17;
+  string action_label_en = 18;
+  string action_label_ar = 19;
+}
