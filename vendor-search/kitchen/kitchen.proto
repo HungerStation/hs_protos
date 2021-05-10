@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "vendor-search/kitchen";
+
+message Kitchen {
+  message Metadata {
+    enum ActionType {
+      CREATE = 0;
+      UPDATE = 1;
+      DELETE = 2;
+    }
+
+    string guid = 1;
+    string source = 2;
+    ActionType action = 3;
+    google.protobuf.Timestamp event_timestamp = 4;
+  }
+
+  Metadata metadata = 1;
+  uint32 id = 2;
+  string name = 3;
+  google.protobuf.Timestamp created_at = 4;
+  google.protobuf.Timestamp updated_at = 5;
+  bool enabled = 6;
+  string image_url = 7;
+  string name_ar = 8;
+  string slug = 9;
+  string description = 10;
+  string description_ar = 11;
+  string slug_ar = 12;
+  string photo_url = 13;
+  uint32 weight = 14;
+  string salesforce_name = 15;
+}

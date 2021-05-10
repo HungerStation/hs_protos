@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "vendor-search/offer";
+
+message Offer {
+  message Metadata {
+    enum ActionType {
+      CREATE = 0;
+      UPDATE = 1;
+      DELETE = 2;
+    }
+
+    string guid = 1;
+    string source = 2;
+    ActionType action = 3;
+    google.protobuf.Timestamp event_timestamp = 4;
+  }
+
+  Metadata metadata = 1;
+  uint32 id = 2;
+  uint32 branch_id = 3;
+  uint32 offer_id = 4;
+  uint32 offer_weight = 5;
+  string offer_data = 6;
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
+}
