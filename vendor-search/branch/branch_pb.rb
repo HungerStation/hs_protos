@@ -28,36 +28,35 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :accept_cash_on_delivery, :bool, 19
       optional :menu_id, :uint32, 20
       optional :sub_working_time_id, :uint32, 21
-      optional :deleted_at, :message, 22, "google.protobuf.Timestamp"
-      optional :deliver_using_map, :bool, 23
-      optional :accept_voucher, :bool, 24
-      optional :reference_id, :string, 25
-      optional :reference_name, :string, 26
-      optional :reference_name_ar, :string, 27
-      optional :grade, :double, 28
-      optional :delivery_provider, :uint32, 29
-      optional :hello_food_vendor_code, :uint32, 30
-      optional :own_delivery_condition_group_id, :uint32, 31
-      optional :payment_at_restaurant, :bool, 32
-      optional :link_token, :uint32, 33
-      optional :dont_accept_cash, :bool, 34
-      optional :exclude_from_penalty, :bool, 35
-      optional :pay_by_transmitter, :bool, 36
-      optional :enabled_reason, :uint32, 37
-      optional :super_eta, :uint32, 38
-      optional :pay_later, :bool, 39
-      optional :pay_at_delivery_enabled, :bool, 40
-      optional :salesforce_grid, :uint32, 41
-      optional :status_updated_at, :message, 42, "google.protobuf.Timestamp"
-      optional :current_status, :uint32, 43
-      optional :salesforce_id, :uint32, 44
-      optional :sf_account_reference_id, :uint32, 45
-      optional :disable_order_note, :bool, 46
-      optional :commission_base, :uint32, 47
-      optional :finance_specefication, :uint32, 48
-      optional :company_bank_account_id, :uint32, 49
-      optional :is_new, :bool, 50
-      optional :preferred_language, :uint32, 51
+      optional :deliver_using_map, :bool, 22
+      optional :accept_voucher, :bool, 23
+      optional :reference_id, :string, 24
+      optional :reference_name, :string, 25
+      optional :reference_name_ar, :string, 26
+      optional :grade, :double, 27
+      optional :delivery_provider, :uint32, 28
+      optional :hello_food_vendor_code, :uint32, 29
+      optional :own_delivery_condition_group_id, :uint32, 30
+      optional :payment_at_restaurant, :bool, 31
+      optional :link_token, :uint32, 32
+      optional :dont_accept_cash, :bool, 33
+      optional :exclude_from_penalty, :bool, 34
+      optional :pay_by_transmitter, :bool, 35
+      optional :enabled_reason, :uint32, 36
+      optional :super_eta, :uint32, 37
+      optional :pay_later, :bool, 38
+      optional :pay_at_delivery_enabled, :bool, 39
+      optional :salesforce_grid, :uint32, 40
+      optional :status_updated_at, :message, 41, "google.protobuf.Timestamp"
+      optional :current_status, :uint32, 42
+      optional :salesforce_id, :uint32, 43
+      optional :sf_account_reference_id, :uint32, 44
+      optional :disable_order_note, :bool, 45
+      optional :commission_base, :uint32, 46
+      optional :finance_specefication, :uint32, 47
+      optional :company_bank_account_id, :uint32, 48
+      optional :is_new, :bool, 49
+      optional :preferred_language, :uint32, 50
     end
     add_message "Branch.Metadata" do
       optional :guid, :string, 1

@@ -32,5 +32,4 @@ message WeekTime {
   uint32 weektimerule_id = 12;
   google.protobuf.Timestamp created_at = 13;
   google.protobuf.Timestamp updated_at = 14;
-  google.protobuf.Timestamp deleted_at = 15;
 }
