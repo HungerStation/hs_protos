@@ -29,25 +29,24 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :external_service_host_id, :int32, 20
       optional :sub_working_time_id, :int32, 21
       optional :logo_ar_url, :string, 22
-      optional :deleted_at, :message, 23, "google.protobuf.Timestamp"
-      optional :grade, :double, 24
-      optional :bias, :int32, 25
-      optional :background_url, :string, 26
-      optional :sponsorship, :int32, 27
-      optional :sla_dashboard, :bool, 28
-      optional :cover_photo_url, :string, 29
-      optional :slug_ar, :string, 30
-      optional :vat_applied, :bool, 31
-      optional :brand_id, :int32, 32
-      optional :store_type_id, :int32, 33
-      optional :ios_cover_photo_url, :string, 34
-      optional :android_cover_photo_url, :string, 35
-      optional :enabled_reason, :int32, 36
-      optional :restaurant_type, :int32, 37
-      optional :rate_average, :float, 38
-      optional :rate_count, :int32, 39
-      optional :vertical_id, :int32, 40
-      optional :boolean, :bool, 41
+      optional :grade, :double, 23
+      optional :bias, :int32, 24
+      optional :background_url, :string, 25
+      optional :sponsorship, :int32, 26
+      optional :sla_dashboard, :bool, 27
+      optional :cover_photo_url, :string, 28
+      optional :slug_ar, :string, 29
+      optional :vat_applied, :bool, 30
+      optional :brand_id, :int32, 31
+      optional :store_type_id, :int32, 32
+      optional :ios_cover_photo_url, :string, 33
+      optional :android_cover_photo_url, :string, 34
+      optional :enabled_reason, :int32, 35
+      optional :restaurant_type, :int32, 36
+      optional :rate_average, :float, 37
+      optional :rate_count, :int32, 38
+      optional :vertical_id, :int32, 39
+      optional :boolean, :bool, 40
     end
     add_message "Restaurant.Metadata" do
       optional :guid, :string, 1
