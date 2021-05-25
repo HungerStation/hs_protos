@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "vendor-search/cutback;cutback";
+option go_package = "vendor-search/cutback";
 
 message Cutback {
   message Metadata {
