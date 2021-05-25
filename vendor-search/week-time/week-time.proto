@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "vendor-search/week-time;week_time";
+
+message WeekTime {
+  message Metadata {
+    enum ActionType {
+      CREATE = 0;
+      UPDATE = 1;
+      DELETE = 2;
+    }
+
+    string guid = 1;
+    string source = 2;
+    ActionType action = 3;
+    google.protobuf.Timestamp event_timestamp = 4;
+  }
+
+  Metadata metadata = 1;
+  uint32 id = 2;
+  bool saturday = 3;
+  bool sunday = 4;
+  bool monday = 5;
+  bool tuesday = 6;
+  bool wednesday = 7;
+  bool thursday = 8;
+  bool friday = 9;
+  uint32 start_minute = 10;
+  uint32 end_minute = 11;
+  uint32 weektimerule_id = 12;
+  google.protobuf.Timestamp created_at = 13;
+  google.protobuf.Timestamp updated_at = 14;
+  google.protobuf.Timestamp deleted_at = 15;
+}
