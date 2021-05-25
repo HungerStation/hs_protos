@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "vendor-search/cutback";
+
+message Cutback {
+  message Metadata {
+    enum ActionType {
+      CREATE = 0;
+      UPDATE = 1;
+      DELETE = 2;
+    }
+
+    string guid = 1;
+    string source = 2;
+    ActionType action = 3;
+    google.protobuf.Timestamp event_timestamp = 4;
+  }
+
+  Metadata metadata = 1;
+  uint32 id = 2;
+  float cutback_amount = 3;
+  float minimum = 4;
+  google.protobuf.Timestamp created_at = 5;
+  google.protobuf.Timestamp updated_at = 6;
+  double percentage = 7;
+  uint32 offer_id = 8;
+  uint32 delivery_fee_percentage_discount = 9;
+  float maximum = 10;
+  double delivery_fee_fixed_discount = 11;
+}
