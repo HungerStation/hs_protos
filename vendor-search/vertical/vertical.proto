@@ -3,6 +3,7 @@ syntax = "proto3";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "vendor-search/vertical";
+option ruby_package = "Pubsub::Protos::VendorSearch";
 
 message Vertical {
   message Metadata {

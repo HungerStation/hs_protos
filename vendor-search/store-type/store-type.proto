@@ -5,6 +5,7 @@ import "google/protobuf/timestamp.proto";
 package protos.vendorsearch.storetype;
 
 option go_package = "vendor-search/store-type;store_type";
+option ruby_package = "Pubsub::Protos::VendorSearch";
 
 message StoreType {
   message Metadata {

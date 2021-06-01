@@ -3,6 +3,7 @@ syntax = "proto3";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "vendor-search/week-time;week_time";
+option ruby_package = "Pubsub::Protos::VendorSearch";
 
 message WeekTime {
   message Metadata {

@@ -3,6 +3,7 @@ syntax = "proto3";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "vendor-search/branch";
+option ruby_package = "Pubsub::Protos::VendorSearch";
 
 message Branch {
   message Metadata {
