@@ -37,6 +37,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
 end
 
-Kitchen = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Kitchen").msgclass
-Kitchen::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Kitchen.Metadata").msgclass
-Kitchen::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Kitchen.Metadata.ActionType").enummodule
+module PubsubSynchronizer
+  module Protobufs
+    module Protos
+      Kitchen = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Kitchen").msgclass
+      Kitchen::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Kitchen.Metadata").msgclass
+      Kitchen::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Kitchen.Metadata.ActionType").enummodule
+    end
+  end
+end

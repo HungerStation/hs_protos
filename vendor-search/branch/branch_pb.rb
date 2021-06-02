@@ -22,7 +22,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :printer_id, :uint32, 13
       optional :accept_credit_card, :bool, 14
       optional :company_id, :uint32, 15
-      optional :public_phone_number, :uint32, 16
+      optional :public_phone_number, :string, 16
       optional :follow_up_minutes, :uint32, 17
       optional :billing_group_id, :uint32, 18
       optional :accept_cash_on_delivery, :bool, 19
@@ -35,10 +35,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :reference_name_ar, :string, 26
       optional :grade, :double, 27
       optional :delivery_provider, :uint32, 28
-      optional :hello_food_vendor_code, :uint32, 29
+      optional :hello_food_vendor_code, :string, 29
       optional :own_delivery_condition_group_id, :uint32, 30
       optional :payment_at_restaurant, :bool, 31
-      optional :link_token, :uint32, 32
+      optional :link_token, :string, 32
       optional :dont_accept_cash, :bool, 33
       optional :exclude_from_penalty, :bool, 34
       optional :pay_by_transmitter, :bool, 35
@@ -76,7 +76,13 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
 end
 
-Branch = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Branch").msgclass
-Branch::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Branch.Metadata").msgclass
-Branch::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Branch.Metadata.ActionType").enummodule
-Branch::Location = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Branch.Location").msgclass
+module PubsubSynchronizer
+  module Protobufs
+    module Protos
+      Branch = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Branch").msgclass
+      Branch::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Branch.Metadata").msgclass
+      Branch::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Branch.Metadata.ActionType").enummodule
+      Branch::Location = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Branch.Location").msgclass
+    end
+  end
+end

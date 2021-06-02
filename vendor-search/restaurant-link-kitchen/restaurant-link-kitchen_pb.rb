@@ -28,6 +28,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
 end
 
-RestaurantLinkKitchen = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("RestaurantLinkKitchen").msgclass
-RestaurantLinkKitchen::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("RestaurantLinkKitchen.Metadata").msgclass
-RestaurantLinkKitchen::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("RestaurantLinkKitchen.Metadata.ActionType").enummodule
+module PubsubSynchronizer
+  module Protobufs
+    module Protos
+      RestaurantLinkKitchen = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("RestaurantLinkKitchen").msgclass
+      RestaurantLinkKitchen::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("RestaurantLinkKitchen.Metadata").msgclass
+      RestaurantLinkKitchen::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("RestaurantLinkKitchen.Metadata.ActionType").enummodule
+    end
+  end
+end

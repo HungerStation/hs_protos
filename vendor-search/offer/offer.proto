@@ -3,6 +3,7 @@ syntax = "proto3";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "vendor-search/offer";
+option ruby_package = "PubsubSynchronizer::Protobufs::Protos";
 
 message Offer {
   message Metadata {

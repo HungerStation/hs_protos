@@ -28,6 +28,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
 end
 
-HomeModuleVertical = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("HomeModuleVertical").msgclass
-HomeModuleVertical::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("HomeModuleVertical.Metadata").msgclass
-HomeModuleVertical::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("HomeModuleVertical.Metadata.ActionType").enummodule
+module PubsubSynchronizer
+  module Protobufs
+    module Protos
+      HomeModuleVertical = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("HomeModuleVertical").msgclass
+      HomeModuleVertical::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("HomeModuleVertical.Metadata").msgclass
+      HomeModuleVertical::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("HomeModuleVertical.Metadata.ActionType").enummodule
+    end
+  end
+end
