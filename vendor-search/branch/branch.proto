@@ -3,6 +3,7 @@ syntax = "proto3";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "vendor-search/branch";
+option ruby_package = "PubsubSynchronizer::Protobufs::Protos";
 
 message Branch {
   message Metadata {
@@ -38,7 +39,7 @@ message Branch {
   uint32 printer_id = 13;
   bool accept_credit_card = 14;
   uint32 company_id = 15;
-  uint32 public_phone_number = 16;
+  string public_phone_number = 16;
   uint32 follow_up_minutes = 17;
   uint32 billing_group_id = 18;
   bool accept_cash_on_delivery = 19;
@@ -51,10 +52,10 @@ message Branch {
   string reference_name_ar = 26;
   double grade = 27;
   uint32 delivery_provider = 28;
-  uint32 hello_food_vendor_code = 29;
+  string hello_food_vendor_code = 29;
   uint32 own_delivery_condition_group_id = 30;
   bool payment_at_restaurant = 31;
-  uint32 link_token = 32;
+  string link_token = 32;
   bool dont_accept_cash = 33;
   bool exclude_from_penalty = 34;
   bool pay_by_transmitter = 35;

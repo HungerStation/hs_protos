@@ -3,6 +3,7 @@ syntax = "proto3";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "vendor-search/week-time-rule;week_time_rule";
+option ruby_package = "PubsubSynchronizer::Protobufs::Protos";
 
 message WeekTimeRule {
   message Metadata {

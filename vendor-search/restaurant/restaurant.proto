@@ -3,6 +3,7 @@ syntax = "proto3";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "vendor-search/restaurant";
+option ruby_package = "PubsubSynchronizer::Protobufs::Protos";
 
 message Restaurant {
   message Metadata {

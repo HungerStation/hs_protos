@@ -2,9 +2,8 @@ syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
 
-package protos.vendorsearch.storetype;
-
 option go_package = "vendor-search/store-type;store_type";
+option ruby_package = "PubsubSynchronizer::Protobufs::Protos";
 
 message StoreType {
   message Metadata {

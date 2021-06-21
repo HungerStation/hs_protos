@@ -30,6 +30,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
 end
 
-Offer = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Offer").msgclass
-Offer::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Offer.Metadata").msgclass
-Offer::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Offer.Metadata.ActionType").enummodule
+module PubsubSynchronizer
+  module Protobufs
+    module Protos
+      Offer = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Offer").msgclass
+      Offer::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Offer.Metadata").msgclass
+      Offer::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Offer.Metadata.ActionType").enummodule
+    end
+  end
+end

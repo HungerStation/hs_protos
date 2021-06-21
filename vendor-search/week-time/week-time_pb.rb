@@ -36,6 +36,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
 end
 
-WeekTime = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("WeekTime").msgclass
-WeekTime::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("WeekTime.Metadata").msgclass
-WeekTime::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("WeekTime.Metadata.ActionType").enummodule
+module PubsubSynchronizer
+  module Protobufs
+    module Protos
+      WeekTime = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("WeekTime").msgclass
+      WeekTime::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("WeekTime.Metadata").msgclass
+      WeekTime::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("WeekTime.Metadata.ActionType").enummodule
+    end
+  end
+end

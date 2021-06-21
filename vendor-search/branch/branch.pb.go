@@ -90,7 +90,7 @@ type Branch struct {
 	PrinterId                   uint32                 `protobuf:"varint,13,opt,name=printer_id,json=printerId,proto3" json:"printer_id,omitempty"`
 	AcceptCreditCard            bool                   `protobuf:"varint,14,opt,name=accept_credit_card,json=acceptCreditCard,proto3" json:"accept_credit_card,omitempty"`
 	CompanyId                   uint32                 `protobuf:"varint,15,opt,name=company_id,json=companyId,proto3" json:"company_id,omitempty"`
-	PublicPhoneNumber           uint32                 `protobuf:"varint,16,opt,name=public_phone_number,json=publicPhoneNumber,proto3" json:"public_phone_number,omitempty"`
+	PublicPhoneNumber           string                 `protobuf:"varint,16,opt,name=public_phone_number,json=publicPhoneNumber,proto3" json:"public_phone_number,omitempty"`
 	FollowUpMinutes             uint32                 `protobuf:"varint,17,opt,name=follow_up_minutes,json=followUpMinutes,proto3" json:"follow_up_minutes,omitempty"`
 	BillingGroupId              uint32                 `protobuf:"varint,18,opt,name=billing_group_id,json=billingGroupId,proto3" json:"billing_group_id,omitempty"`
 	AcceptCashOnDelivery        bool                   `protobuf:"varint,19,opt,name=accept_cash_on_delivery,json=acceptCashOnDelivery,proto3" json:"accept_cash_on_delivery,omitempty"`
@@ -103,10 +103,10 @@ type Branch struct {
 	ReferenceNameAr             string                 `protobuf:"bytes,26,opt,name=reference_name_ar,json=referenceNameAr,proto3" json:"reference_name_ar,omitempty"`
 	Grade                       float64                `protobuf:"fixed64,27,opt,name=grade,proto3" json:"grade,omitempty"`
 	DeliveryProvider            uint32                 `protobuf:"varint,28,opt,name=delivery_provider,json=deliveryProvider,proto3" json:"delivery_provider,omitempty"`
-	HelloFoodVendorCode         uint32                 `protobuf:"varint,29,opt,name=hello_food_vendor_code,json=helloFoodVendorCode,proto3" json:"hello_food_vendor_code,omitempty"`
+	HelloFoodVendorCode         string                 `protobuf:"varint,29,opt,name=hello_food_vendor_code,json=helloFoodVendorCode,proto3" json:"hello_food_vendor_code,omitempty"`
 	OwnDeliveryConditionGroupId uint32                 `protobuf:"varint,30,opt,name=own_delivery_condition_group_id,json=ownDeliveryConditionGroupId,proto3" json:"own_delivery_condition_group_id,omitempty"`
 	PaymentAtRestaurant         bool                   `protobuf:"varint,31,opt,name=payment_at_restaurant,json=paymentAtRestaurant,proto3" json:"payment_at_restaurant,omitempty"`
-	LinkToken                   uint32                 `protobuf:"varint,32,opt,name=link_token,json=linkToken,proto3" json:"link_token,omitempty"`
+	LinkToken                   string                 `protobuf:"varint,32,opt,name=link_token,json=linkToken,proto3" json:"link_token,omitempty"`
 	DontAcceptCash              bool                   `protobuf:"varint,33,opt,name=dont_accept_cash,json=dontAcceptCash,proto3" json:"dont_accept_cash,omitempty"`
 	ExcludeFromPenalty          bool                   `protobuf:"varint,34,opt,name=exclude_from_penalty,json=excludeFromPenalty,proto3" json:"exclude_from_penalty,omitempty"`
 	PayByTransmitter            bool                   `protobuf:"varint,35,opt,name=pay_by_transmitter,json=payByTransmitter,proto3" json:"pay_by_transmitter,omitempty"`

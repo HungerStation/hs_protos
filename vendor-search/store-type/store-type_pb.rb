@@ -6,8 +6,8 @@ require 'google/protobuf'
 require 'google/protobuf/timestamp_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("vendor-search/store-type/store-type.proto", :syntax => :proto3) do
-    add_message "protos.vendorsearch.storetype.StoreType" do
-      optional :metadata, :message, 1, "protos.vendorsearch.storetype.StoreType.Metadata"
+    add_message "StoreType" do
+      optional :metadata, :message, 1, "StoreType.Metadata"
       optional :id, :uint32, 2
       optional :store_type, :uint32, 3
       optional :name, :string, 4
@@ -27,13 +27,13 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :action_label_en, :string, 18
       optional :action_label_ar, :string, 19
     end
-    add_message "protos.vendorsearch.storetype.StoreType.Metadata" do
+    add_message "StoreType.Metadata" do
       optional :guid, :string, 1
       optional :source, :string, 2
-      optional :action, :enum, 3, "protos.vendorsearch.storetype.StoreType.Metadata.ActionType"
+      optional :action, :enum, 3, "StoreType.Metadata.ActionType"
       optional :event_timestamp, :message, 4, "google.protobuf.Timestamp"
     end
-    add_enum "protos.vendorsearch.storetype.StoreType.Metadata.ActionType" do
+    add_enum "StoreType.Metadata.ActionType" do
       value :CREATE, 0
       value :UPDATE, 1
       value :DELETE, 2
@@ -41,12 +41,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
 end
 
-module Protos
-  module Vendorsearch
-    module Storetype
-      StoreType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("protos.vendorsearch.storetype.StoreType").msgclass
-      StoreType::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("protos.vendorsearch.storetype.StoreType.Metadata").msgclass
-      StoreType::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("protos.vendorsearch.storetype.StoreType.Metadata.ActionType").enummodule
+module PubsubSynchronizer
+  module Protobufs
+    module Protos
+      StoreType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("StoreType").msgclass
+      StoreType::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("StoreType.Metadata").msgclass
+      StoreType::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("StoreType.Metadata.ActionType").enummodule
     end
   end
 end

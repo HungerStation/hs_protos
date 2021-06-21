@@ -30,6 +30,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
 end
 
-BranchReviewsSummary = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("BranchReviewsSummary").msgclass
-BranchReviewsSummary::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("BranchReviewsSummary.Metadata").msgclass
-BranchReviewsSummary::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("BranchReviewsSummary.Metadata.ActionType").enummodule
+module PubsubSynchronizer
+  module Protobufs
+    module Protos
+      BranchReviewsSummary = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("BranchReviewsSummary").msgclass
+      BranchReviewsSummary::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("BranchReviewsSummary.Metadata").msgclass
+      BranchReviewsSummary::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("BranchReviewsSummary.Metadata.ActionType").enummodule
+    end
+  end
+end

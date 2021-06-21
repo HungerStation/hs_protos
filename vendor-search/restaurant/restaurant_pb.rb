@@ -62,6 +62,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   end
 end
 
-Restaurant = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Restaurant").msgclass
-Restaurant::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Restaurant.Metadata").msgclass
-Restaurant::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Restaurant.Metadata.ActionType").enummodule
+module PubsubSynchronizer
+  module Protobufs
+    module Protos
+      Restaurant = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Restaurant").msgclass
+      Restaurant::Metadata = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Restaurant.Metadata").msgclass
+      Restaurant::Metadata::ActionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("Restaurant.Metadata.ActionType").enummodule
+    end
+  end
+end
