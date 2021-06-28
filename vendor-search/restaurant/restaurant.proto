@@ -55,8 +55,6 @@ message Restaurant {
   string android_cover_photo_url = 34;
   int32 enabled_reason = 35;
   int32 restaurant_type = 36;
-  float rate_average = 37;
-  int32 rate_count = 38;
-  int32 vertical_id = 39;
-  bool boolean = 40;
+  int32 vertical_id = 37;
+  bool disable_order_note = 38;
 }
