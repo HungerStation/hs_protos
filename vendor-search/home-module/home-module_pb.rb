@@ -12,17 +12,29 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :slug, :string, 3
       optional :redirection, :uint32, 4
       optional :enabled, :bool, 5
-      optional :weight, :uint32, 6
+      optional :weight, :sint32, 6
       optional :render_filter, :bool, 7
       optional :swimlane_config, :string, 8
       optional :title, :string, 9
       optional :title_ar, :string, 10
       optional :description, :string, 11
-      optional :cover_image_url, :string, 12
-      optional :disabled_cover_image_url, :string, 13
-      optional :created_at, :message, 14, "google.protobuf.Timestamp"
-      optional :updated_at, :message, 15, "google.protobuf.Timestamp"
-      repeated :configs, :string, 16
+      optional :cover_image_3x2_url, :string, 12
+      optional :cover_image_3x3_url, :string, 13
+      optional :cover_image_4x3_url, :string, 14
+      optional :cover_image_4x4_url, :string, 15
+      optional :cover_image_7x2_url, :string, 16
+      optional :cover_image_7x3_url, :string, 17
+      optional :cover_image_7x4_url, :string, 18
+      optional :disabled_cover_image_3x2_url, :string, 19
+      optional :disabled_cover_image_3x3_url, :string, 20
+      optional :disabled_cover_image_4x3_url, :string, 21
+      optional :disabled_cover_image_4x4_url, :string, 22
+      optional :disabled_cover_image_7x2_url, :string, 23
+      optional :disabled_cover_image_7x3_url, :string, 24
+      optional :disabled_cover_image_7x4_url, :string, 25
+      optional :created_at, :message, 26, "google.protobuf.Timestamp"
+      optional :updated_at, :message, 27, "google.protobuf.Timestamp"
+      repeated :configs, :string, 28
     end
     add_message "HomeModule.Metadata" do
       optional :guid, :string, 1
