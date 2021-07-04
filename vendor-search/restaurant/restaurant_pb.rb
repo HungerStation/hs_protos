@@ -22,7 +22,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :description_ar, :string, 13
       optional :slug, :string, 14
       optional :featured, :bool, 15
-      optional :weight, :int32, 16
+      optional :weight, :sint32, 16
       optional :company_id, :int32, 17
       optional :working_time_id, :int32, 18
       optional :billing_group_id, :int32, 19
@@ -43,8 +43,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :android_cover_photo_url, :string, 34
       optional :enabled_reason, :int32, 35
       optional :restaurant_type, :int32, 36
-      optional :vertical_id, :int32, 39
-      optional :disable_order_note, :bool, 40
+      optional :vertical_id, :int32, 37
+      optional :disable_order_note, :bool, 38
     end
     add_message "Restaurant.Metadata" do
       optional :guid, :string, 1

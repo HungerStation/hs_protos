@@ -34,7 +34,7 @@ message Restaurant {
   string description_ar = 13;
   string slug = 14;
   bool featured = 15;
-  int32 weight = 16;
+  sint32 weight = 16;
   int32 company_id = 17;
   int32 working_time_id = 18;
   int32 billing_group_id = 19;

@@ -13,7 +13,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :title, :string, 4
       optional :title_ar, :string, 5
       optional :description, :string, 6
-      optional :weight, :uint32, 7
+      optional :weight, :sint32, 7
       optional :enabled, :bool, 8
       optional :created_at, :message, 9, "google.protobuf.Timestamp"
       optional :updated_at, :message, 10, "google.protobuf.Timestamp"
