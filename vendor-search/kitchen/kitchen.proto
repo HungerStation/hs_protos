@@ -32,6 +32,6 @@ message Kitchen {
   string description_ar = 11;
   string slug_ar = 12;
   string photo_url = 13;
-  uint32 weight = 14;
+  sint32 weight = 14;
   string salesforce_name = 15;
 }

@@ -20,7 +20,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :description_ar, :string, 11
       optional :slug_ar, :string, 12
       optional :photo_url, :string, 13
-      optional :weight, :uint32, 14
+      optional :weight, :sint32, 14
       optional :salesforce_name, :string, 15
     end
     add_message "Kitchen.Metadata" do
