@@ -46,14 +46,14 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :super_eta, :uint32, 37
       optional :pay_later, :bool, 38
       optional :pay_at_delivery_enabled, :bool, 39
-      optional :salesforce_grid, :uint32, 40
+      optional :salesforce_grid, :string, 40
       optional :status_updated_at, :message, 41, "google.protobuf.Timestamp"
       optional :current_status, :uint32, 42
-      optional :salesforce_id, :uint32, 43
+      optional :salesforce_id, :string, 43
       optional :sf_account_reference_id, :uint32, 44
       optional :disable_order_note, :bool, 45
-      optional :commission_base, :uint32, 46
-      optional :finance_specefication, :uint32, 47
+      optional :commission_base, :string, 46
+      optional :finance_specefication, :string, 47
       optional :company_bank_account_id, :uint32, 48
       optional :is_new, :bool, 49
       optional :preferred_language, :uint32, 50
