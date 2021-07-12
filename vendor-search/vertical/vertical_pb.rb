@@ -18,7 +18,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :created_at, :message, 9, "google.protobuf.Timestamp"
       optional :updated_at, :message, 10, "google.protobuf.Timestamp"
       optional :category, :uint32, 11
-      optional :salesforce_name, :uint32, 12
+      optional :salesforce_name, :string, 12
     end
     add_message "Vertical.Metadata" do
       optional :guid, :string, 1
