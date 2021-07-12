@@ -30,5 +30,5 @@ message Vertical {
   google.protobuf.Timestamp created_at = 9;
   google.protobuf.Timestamp updated_at = 10;
   uint32 category = 11;
-  uint32 salesforce_name = 12;
+  string salesforce_name = 12;
 }
